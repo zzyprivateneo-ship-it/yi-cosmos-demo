@@ -1,0 +1,2764 @@
+{
+  "metadata": {
+    "method": "TF-IDF（卦名、卦辞与六爻标题的汉字一元/二元词元）+ 余弦距离 + 三维经典MDS",
+    "documents": 64,
+    "vocabulary": 646,
+    "similarityMin": 0.009916,
+    "similarityMean": 0.107132,
+    "similarityMax": 0.669651
+  },
+  "positions": [
+    {
+      "number": 1,
+      "direction": [
+        -0.59948458,
+        0.64446315,
+        -0.47464248
+      ],
+      "canonicalTextLength": 59,
+      "nearest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.3312
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.2985
+        },
+        {
+          "number": 49,
+          "name": "革",
+          "similarity": 0.2038
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0328
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0331
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0333
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "direction": [
+        -0.93816995,
+        -0.15744028,
+        -0.30830131
+      ],
+      "canonicalTextLength": 46,
+      "nearest": [
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.2066
+        },
+        {
+          "number": 28,
+          "name": "大過",
+          "similarity": 0.192
+        },
+        {
+          "number": 18,
+          "name": "蠱",
+          "similarity": 0.1633
+        }
+      ],
+      "farthest": [
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0217
+        },
+        {
+          "number": 9,
+          "name": "小畜",
+          "similarity": 0.0277
+        },
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.0466
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "direction": [
+        -0.59319668,
+        -0.21735472,
+        -0.77516103
+      ],
+      "canonicalTextLength": 49,
+      "nearest": [
+        {
+          "number": 17,
+          "name": "隨",
+          "similarity": 0.2814
+        },
+        {
+          "number": 2,
+          "name": "坤",
+          "similarity": 0.2066
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.1945
+        }
+      ],
+      "farthest": [
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.026
+        },
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.0323
+        },
+        {
+          "number": 44,
+          "name": "姤",
+          "similarity": 0.0357
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "direction": [
+        0.97956824,
+        -0.1004042,
+        -0.17425575
+      ],
+      "canonicalTextLength": 83,
+      "nearest": [
+        {
+          "number": 19,
+          "name": "臨",
+          "similarity": 0.26
+        },
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.2495
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2394
+        }
+      ],
+      "farthest": [
+        {
+          "number": 49,
+          "name": "革",
+          "similarity": 0.0218
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0297
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0396
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "direction": [
+        -0.71309114,
+        -0.69000927,
+        0.12404929
+      ],
+      "canonicalTextLength": 56,
+      "nearest": [
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.3429
+        },
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.2805
+        },
+        {
+          "number": 46,
+          "name": "升",
+          "similarity": 0.2317
+        }
+      ],
+      "farthest": [
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.0386
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.041
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0463
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "direction": [
+        -0.07956371,
+        -0.93589753,
+        0.34316968
+      ],
+      "canonicalTextLength": 64,
+      "nearest": [
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.3429
+        },
+        {
+          "number": 10,
+          "name": "履",
+          "similarity": 0.2758
+        },
+        {
+          "number": 18,
+          "name": "蠱",
+          "similarity": 0.253
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0317
+        },
+        {
+          "number": 62,
+          "name": "小過",
+          "similarity": 0.0384
+        },
+        {
+          "number": 63,
+          "name": "既濟",
+          "similarity": 0.0388
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "direction": [
+        0.87740056,
+        0.41944805,
+        -0.23287677
+      ],
+      "canonicalTextLength": 131,
+      "nearest": [
+        {
+          "number": 19,
+          "name": "臨",
+          "similarity": 0.3093
+        },
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.3046
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2379
+        }
+      ],
+      "farthest": [
+        {
+          "number": 33,
+          "name": "遯",
+          "similarity": 0.0442
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0449
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0482
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "direction": [
+        -0.11615654,
+        0.3816296,
+        0.91698773
+      ],
+      "canonicalTextLength": 42,
+      "nearest": [
+        {
+          "number": 46,
+          "name": "升",
+          "similarity": 0.2458
+        },
+        {
+          "number": 41,
+          "name": "損",
+          "similarity": 0.2393
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.2343
+        }
+      ],
+      "farthest": [
+        {
+          "number": 1,
+          "name": "乾",
+          "similarity": 0.0385
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0399
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0476
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "direction": [
+        -0.12875139,
+        -0.92923941,
+        0.3463195
+      ],
+      "canonicalTextLength": 63,
+      "nearest": [
+        {
+          "number": 61,
+          "name": "中孚",
+          "similarity": 0.2909
+        },
+        {
+          "number": 59,
+          "name": "渙",
+          "similarity": 0.2527
+        },
+        {
+          "number": 15,
+          "name": "謙",
+          "similarity": 0.2459
+        }
+      ],
+      "farthest": [
+        {
+          "number": 2,
+          "name": "坤",
+          "similarity": 0.0277
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0413
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0414
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "direction": [
+        -0.34384373,
+        -0.73345372,
+        0.58635921
+      ],
+      "canonicalTextLength": 57,
+      "nearest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.2854
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.2758
+        },
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.1883
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.034
+        },
+        {
+          "number": 62,
+          "name": "小過",
+          "similarity": 0.0374
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0388
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "direction": [
+        -0.51860271,
+        -0.81072577,
+        0.27161544
+      ],
+      "canonicalTextLength": 56,
+      "nearest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.413
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.3573
+        },
+        {
+          "number": 15,
+          "name": "謙",
+          "similarity": 0.2699
+        }
+      ],
+      "farthest": [
+        {
+          "number": 20,
+          "name": "觀",
+          "similarity": 0.02
+        },
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.024
+        },
+        {
+          "number": 35,
+          "name": "晉",
+          "similarity": 0.0245
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "direction": [
+        0.42764815,
+        0.90252008,
+        -0.05074019
+      ],
+      "canonicalTextLength": 71,
+      "nearest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.3573
+        },
+        {
+          "number": 7,
+          "name": "師",
+          "similarity": 0.235
+        },
+        {
+          "number": 33,
+          "name": "遯",
+          "similarity": 0.2247
+        }
+      ],
+      "farthest": [
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0264
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0334
+        },
+        {
+          "number": 48,
+          "name": "井",
+          "similarity": 0.0424
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "direction": [
+        -0.5839439,
+        -0.78356007,
+        -0.21223369
+      ],
+      "canonicalTextLength": 66,
+      "nearest": [
+        {
+          "number": 53,
+          "name": "漸",
+          "similarity": 0.2936
+        },
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.2296
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.1741
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0467
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.0483
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.0493
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "direction": [
+        0.07242012,
+        0.52102156,
+        0.85046567
+      ],
+      "canonicalTextLength": 64,
+      "nearest": [
+        {
+          "number": 25,
+          "name": "无妄",
+          "similarity": 0.2541
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.2326
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2241
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0387
+        },
+        {
+          "number": 31,
+          "name": "咸",
+          "similarity": 0.0394
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.0483
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "direction": [
+        -0.61524417,
+        0.16914022,
+        0.76997805
+      ],
+      "canonicalTextLength": 53,
+      "nearest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.2699
+        },
+        {
+          "number": 9,
+          "name": "小畜",
+          "similarity": 0.2459
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.1914
+        }
+      ],
+      "farthest": [
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.0276
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.03
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0389
+        }
+      ]
+    },
+    {
+      "number": 16,
+      "direction": [
+        0.60207413,
+        0.45793707,
+        -0.65406451
+      ],
+      "canonicalTextLength": 62,
+      "nearest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.217
+        },
+        {
+          "number": 7,
+          "name": "師",
+          "similarity": 0.2117
+        },
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.2069
+        }
+      ],
+      "farthest": [
+        {
+          "number": 26,
+          "name": "大畜",
+          "similarity": 0.0238
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0252
+        },
+        {
+          "number": 44,
+          "name": "姤",
+          "similarity": 0.0338
+        }
+      ]
+    },
+    {
+      "number": 17,
+      "direction": [
+        -0.72005985,
+        0.3780007,
+        -0.58191863
+      ],
+      "canonicalTextLength": 72,
+      "nearest": [
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.2814
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.2247
+        },
+        {
+          "number": 53,
+          "name": "漸",
+          "similarity": 0.2117
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0418
+        },
+        {
+          "number": 59,
+          "name": "渙",
+          "similarity": 0.042
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0434
+        }
+      ]
+    },
+    {
+      "number": 18,
+      "direction": [
+        0.76823898,
+        -0.61496758,
+        -0.17783067
+      ],
+      "canonicalTextLength": 81,
+      "nearest": [
+        {
+          "number": 30,
+          "name": "離",
+          "similarity": 0.3077
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.253
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2363
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0389
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0396
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0423
+        }
+      ]
+    },
+    {
+      "number": 19,
+      "direction": [
+        0.9568827,
+        0.27923586,
+        -0.08001769
+      ],
+      "canonicalTextLength": 79,
+      "nearest": [
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.3701
+        },
+        {
+          "number": 7,
+          "name": "師",
+          "similarity": 0.3093
+        },
+        {
+          "number": 4,
+          "name": "蒙",
+          "similarity": 0.26
+        }
+      ],
+      "farthest": [
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0303
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0358
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0364
+        }
+      ]
+    },
+    {
+      "number": 20,
+      "direction": [
+        -0.39299878,
+        0.88000071,
+        0.26674089
+      ],
+      "canonicalTextLength": 63,
+      "nearest": [
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.2143
+        },
+        {
+          "number": 27,
+          "name": "頤",
+          "similarity": 0.1894
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.1803
+        }
+      ],
+      "farthest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.02
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0286
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0372
+        }
+      ]
+    },
+    {
+      "number": 21,
+      "direction": [
+        0.85857942,
+        -0.39855724,
+        0.32248025
+      ],
+      "canonicalTextLength": 73,
+      "nearest": [
+        {
+          "number": 26,
+          "name": "大畜",
+          "similarity": 0.332
+        },
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.2969
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2252
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0213
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0246
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0351
+        }
+      ]
+    },
+    {
+      "number": 22,
+      "direction": [
+        0.78800017,
+        -0.57360272,
+        0.22368649
+      ],
+      "canonicalTextLength": 74,
+      "nearest": [
+        {
+          "number": 52,
+          "name": "艮",
+          "similarity": 0.2766
+        },
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.2709
+        },
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.2429
+        }
+      ],
+      "farthest": [
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0274
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.0376
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0488
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "direction": [
+        0.32014402,
+        0.87249588,
+        0.36913242
+      ],
+      "canonicalTextLength": 72,
+      "nearest": [
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.2965
+        },
+        {
+          "number": 27,
+          "name": "頤",
+          "similarity": 0.2551
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.2464
+        }
+      ],
+      "farthest": [
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0225
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0321
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0374
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "direction": [
+        0.74245383,
+        -0.64164873,
+        0.19248172
+      ],
+      "canonicalTextLength": 75,
+      "nearest": [
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2429
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2403
+        },
+        {
+          "number": 18,
+          "name": "蠱",
+          "similarity": 0.2288
+        }
+      ],
+      "farthest": [
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.029
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0295
+        },
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0302
+        }
+      ]
+    },
+    {
+      "number": 25,
+      "direction": [
+        0.43541518,
+        0.5440209,
+        0.7172551
+      ],
+      "canonicalTextLength": 75,
+      "nearest": [
+        {
+          "number": 14,
+          "name": "大有",
+          "similarity": 0.2541
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.214
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.1998
+        }
+      ],
+      "farthest": [
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0425
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.048
+        },
+        {
+          "number": 52,
+          "name": "艮",
+          "similarity": 0.0487
+        }
+      ]
+    },
+    {
+      "number": 26,
+      "direction": [
+        -0.2384011,
+        -0.8811365,
+        0.40836673
+      ],
+      "canonicalTextLength": 49,
+      "nearest": [
+        {
+          "number": 21,
+          "name": "噬嗑",
+          "similarity": 0.332
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.1929
+        },
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.1793
+        }
+      ],
+      "farthest": [
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.0175
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.0238
+        },
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0306
+        }
+      ]
+    },
+    {
+      "number": 27,
+      "direction": [
+        0.7113907,
+        0.63514588,
+        0.30085376
+      ],
+      "canonicalTextLength": 71,
+      "nearest": [
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2551
+        },
+        {
+          "number": 4,
+          "name": "蒙",
+          "similarity": 0.2287
+        },
+        {
+          "number": 60,
+          "name": "節",
+          "similarity": 0.2218
+        }
+      ],
+      "farthest": [
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.028
+        },
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.029
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0373
+        }
+      ]
+    },
+    {
+      "number": 28,
+      "direction": [
+        0.15095792,
+        0.56402415,
+        -0.81184264
+      ],
+      "canonicalTextLength": 77,
+      "nearest": [
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.3003
+        },
+        {
+          "number": 62,
+          "name": "小過",
+          "similarity": 0.223
+        },
+        {
+          "number": 18,
+          "name": "蠱",
+          "similarity": 0.2229
+        }
+      ],
+      "farthest": [
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.0364
+        },
+        {
+          "number": 26,
+          "name": "大畜",
+          "similarity": 0.0389
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0418
+        }
+      ]
+    },
+    {
+      "number": 29,
+      "direction": [
+        -0.83269669,
+        -0.17712656,
+        -0.52463549
+      ],
+      "canonicalTextLength": 69,
+      "nearest": [
+        {
+          "number": 53,
+          "name": "漸",
+          "similarity": 0.248
+        },
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.2281
+        },
+        {
+          "number": 61,
+          "name": "中孚",
+          "similarity": 0.2113
+        }
+      ],
+      "farthest": [
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0331
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.0376
+        },
+        {
+          "number": 30,
+          "name": "離",
+          "similarity": 0.038
+        }
+      ]
+    },
+    {
+      "number": 30,
+      "direction": [
+        0.5502129,
+        -0.72164129,
+        0.42011858
+      ],
+      "canonicalTextLength": 70,
+      "nearest": [
+        {
+          "number": 18,
+          "name": "蠱",
+          "similarity": 0.3077
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2296
+        },
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.2246
+        }
+      ],
+      "farthest": [
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.0352
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.038
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0478
+        }
+      ]
+    },
+    {
+      "number": 31,
+      "direction": [
+        0.7075643,
+        -0.21119214,
+        -0.67435201
+      ],
+      "canonicalTextLength": 77,
+      "nearest": [
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.3231
+        },
+        {
+          "number": 52,
+          "name": "艮",
+          "similarity": 0.2773
+        },
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.2427
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0291
+        },
+        {
+          "number": 61,
+          "name": "中孚",
+          "similarity": 0.0344
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0359
+        }
+      ]
+    },
+    {
+      "number": 32,
+      "direction": [
+        0.72438631,
+        0.1505959,
+        -0.67274464
+      ],
+      "canonicalTextLength": 73,
+      "nearest": [
+        {
+          "number": 7,
+          "name": "師",
+          "similarity": 0.3046
+        },
+        {
+          "number": 28,
+          "name": "大過",
+          "similarity": 0.3003
+        },
+        {
+          "number": 4,
+          "name": "蒙",
+          "similarity": 0.2495
+        }
+      ],
+      "farthest": [
+        {
+          "number": 42,
+          "name": "益",
+          "similarity": 0.0269
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0439
+        },
+        {
+          "number": 20,
+          "name": "觀",
+          "similarity": 0.0442
+        }
+      ]
+    },
+    {
+      "number": 33,
+      "direction": [
+        -0.45936667,
+        0.74850711,
+        0.47824614
+      ],
+      "canonicalTextLength": 59,
+      "nearest": [
+        {
+          "number": 49,
+          "name": "革",
+          "similarity": 0.3833
+        },
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.2542
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.2247
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0366
+        },
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.0377
+        },
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.0377
+        }
+      ]
+    },
+    {
+      "number": 34,
+      "direction": [
+        0.81754217,
+        -0.36467836,
+        -0.4456843
+      ],
+      "canonicalTextLength": 89,
+      "nearest": [
+        {
+          "number": 31,
+          "name": "咸",
+          "similarity": 0.3231
+        },
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.2678
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.2508
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0388
+        },
+        {
+          "number": 2,
+          "name": "坤",
+          "similarity": 0.0566
+        },
+        {
+          "number": 42,
+          "name": "益",
+          "similarity": 0.0569
+        }
+      ]
+    },
+    {
+      "number": 35,
+      "direction": [
+        0.51829386,
+        0.77070019,
+        0.3706652
+      ],
+      "canonicalTextLength": 65,
+      "nearest": [
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.2398
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2131
+        },
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.2
+        }
+      ],
+      "farthest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0245
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0416
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0439
+        }
+      ]
+    },
+    {
+      "number": 36,
+      "direction": [
+        -0.90083619,
+        -0.27255142,
+        -0.33794953
+      ],
+      "canonicalTextLength": 83,
+      "nearest": [
+        {
+          "number": 59,
+          "name": "渙",
+          "similarity": 0.3483
+        },
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.2067
+        },
+        {
+          "number": 60,
+          "name": "節",
+          "similarity": 0.1916
+        }
+      ],
+      "farthest": [
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.0241
+        },
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.0251
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.0299
+        }
+      ]
+    },
+    {
+      "number": 37,
+      "direction": [
+        0.92466542,
+        -0.36242802,
+        -0.11678949
+      ],
+      "canonicalTextLength": 79,
+      "nearest": [
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.337
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2709
+        },
+        {
+          "number": 31,
+          "name": "咸",
+          "similarity": 0.2427
+        }
+      ],
+      "farthest": [
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0304
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0322
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.0482
+        }
+      ]
+    },
+    {
+      "number": 38,
+      "direction": [
+        0.90026319,
+        -0.11978524,
+        -0.41854233
+      ],
+      "canonicalTextLength": 78,
+      "nearest": [
+        {
+          "number": 21,
+          "name": "噬嗑",
+          "similarity": 0.2969
+        },
+        {
+          "number": 63,
+          "name": "既濟",
+          "similarity": 0.2698
+        },
+        {
+          "number": 35,
+          "name": "晉",
+          "similarity": 0.2398
+        }
+      ],
+      "farthest": [
+        {
+          "number": 15,
+          "name": "謙",
+          "similarity": 0.0276
+        },
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.0323
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0386
+        }
+      ]
+    },
+    {
+      "number": 39,
+      "direction": [
+        -0.67704001,
+        0.6329368,
+        -0.37551008
+      ],
+      "canonicalTextLength": 49,
+      "nearest": [
+        {
+          "number": 1,
+          "name": "乾",
+          "similarity": 0.3312
+        },
+        {
+          "number": 40,
+          "name": "解",
+          "similarity": 0.2738
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.2174
+        }
+      ],
+      "farthest": [
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.0209
+        },
+        {
+          "number": 21,
+          "name": "噬嗑",
+          "similarity": 0.0213
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0272
+        }
+      ]
+    },
+    {
+      "number": 40,
+      "direction": [
+        -0.42732345,
+        0.89151046,
+        0.15034548
+      ],
+      "canonicalTextLength": 62,
+      "nearest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.2738
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2464
+        },
+        {
+          "number": 8,
+          "name": "比",
+          "similarity": 0.2343
+        }
+      ],
+      "farthest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0387
+        },
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.0482
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.0528
+        }
+      ]
+    },
+    {
+      "number": 41,
+      "direction": [
+        -0.0085323,
+        -0.02506157,
+        0.9996495
+      ],
+      "canonicalTextLength": 66,
+      "nearest": [
+        {
+          "number": 42,
+          "name": "益",
+          "similarity": 0.6697
+        },
+        {
+          "number": 8,
+          "name": "比",
+          "similarity": 0.2393
+        },
+        {
+          "number": 14,
+          "name": "大有",
+          "similarity": 0.1958
+        }
+      ],
+      "farthest": [
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0336
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0337
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0369
+        }
+      ]
+    },
+    {
+      "number": 42,
+      "direction": [
+        0.05034545,
+        0.01202494,
+        0.99865947
+      ],
+      "canonicalTextLength": 62,
+      "nearest": [
+        {
+          "number": 41,
+          "name": "損",
+          "similarity": 0.6697
+        },
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.2204
+        },
+        {
+          "number": 14,
+          "name": "大有",
+          "similarity": 0.2115
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0224
+        },
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.0269
+        },
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0302
+        }
+      ]
+    },
+    {
+      "number": 43,
+      "direction": [
+        -0.8199673,
+        -0.14099787,
+        -0.55477313
+      ],
+      "canonicalTextLength": 64,
+      "nearest": [
+        {
+          "number": 44,
+          "name": "姤",
+          "similarity": 0.4431
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2508
+        },
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.1259
+        }
+      ],
+      "farthest": [
+        {
+          "number": 2,
+          "name": "坤",
+          "similarity": 0.0217
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.0225
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.0264
+        }
+      ]
+    },
+    {
+      "number": 44,
+      "direction": [
+        -0.91499585,
+        -0.06933376,
+        -0.39746123
+      ],
+      "canonicalTextLength": 56,
+      "nearest": [
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.4431
+        },
+        {
+          "number": 21,
+          "name": "噬嗑",
+          "similarity": 0.1906
+        },
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.1849
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0312
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0317
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.0338
+        }
+      ]
+    },
+    {
+      "number": 45,
+      "direction": [
+        0.94217741,
+        0.33491523,
+        -0.0115547
+      ],
+      "canonicalTextLength": 74,
+      "nearest": [
+        {
+          "number": 19,
+          "name": "臨",
+          "similarity": 0.3701
+        },
+        {
+          "number": 37,
+          "name": "家人",
+          "similarity": 0.337
+        },
+        {
+          "number": 46,
+          "name": "升",
+          "similarity": 0.2566
+        }
+      ],
+      "farthest": [
+        {
+          "number": 26,
+          "name": "大畜",
+          "similarity": 0.0175
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.024
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0251
+        }
+      ]
+    },
+    {
+      "number": 46,
+      "direction": [
+        -0.13110968,
+        0.72525767,
+        0.67587837
+      ],
+      "canonicalTextLength": 48,
+      "nearest": [
+        {
+          "number": 45,
+          "name": "萃",
+          "similarity": 0.2566
+        },
+        {
+          "number": 8,
+          "name": "比",
+          "similarity": 0.2458
+        },
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.2341
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0396
+        },
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.0527
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.0561
+        }
+      ]
+    },
+    {
+      "number": 47,
+      "direction": [
+        -0.7835223,
+        -0.3122704,
+        -0.53719644
+      ],
+      "canonicalTextLength": 57,
+      "nearest": [
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.2805
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.1544
+        },
+        {
+          "number": 4,
+          "name": "蒙",
+          "similarity": 0.1484
+        }
+      ],
+      "farthest": [
+        {
+          "number": 52,
+          "name": "艮",
+          "similarity": 0.0263
+        },
+        {
+          "number": 27,
+          "name": "頤",
+          "similarity": 0.029
+        },
+        {
+          "number": 42,
+          "name": "益",
+          "similarity": 0.0302
+        }
+      ]
+    },
+    {
+      "number": 48,
+      "direction": [
+        -0.98281931,
+        -0.02332041,
+        0.18309113
+      ],
+      "canonicalTextLength": 53,
+      "nearest": [
+        {
+          "number": 50,
+          "name": "鼎",
+          "similarity": 0.2271
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.2201
+        },
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.1717
+        }
+      ],
+      "farthest": [
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0313
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0357
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.0424
+        }
+      ]
+    },
+    {
+      "number": 49,
+      "direction": [
+        -0.79490707,
+        0.58448771,
+        0.16277858
+      ],
+      "canonicalTextLength": 51,
+      "nearest": [
+        {
+          "number": 33,
+          "name": "遯",
+          "similarity": 0.3833
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2394
+        },
+        {
+          "number": 1,
+          "name": "乾",
+          "similarity": 0.2038
+        }
+      ],
+      "farthest": [
+        {
+          "number": 4,
+          "name": "蒙",
+          "similarity": 0.0218
+        },
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.0484
+        },
+        {
+          "number": 2,
+          "name": "坤",
+          "similarity": 0.0508
+        }
+      ]
+    },
+    {
+      "number": 50,
+      "direction": [
+        -0.18388717,
+        0.98261461,
+        0.025574
+      ],
+      "canonicalTextLength": 63,
+      "nearest": [
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2965
+        },
+        {
+          "number": 33,
+          "name": "遯",
+          "similarity": 0.2542
+        },
+        {
+          "number": 46,
+          "name": "升",
+          "similarity": 0.2341
+        }
+      ],
+      "farthest": [
+        {
+          "number": 24,
+          "name": "復",
+          "similarity": 0.029
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0408
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0489
+        }
+      ]
+    },
+    {
+      "number": 51,
+      "direction": [
+        0.58221108,
+        -0.36677289,
+        -0.72560865
+      ],
+      "canonicalTextLength": 68,
+      "nearest": [
+        {
+          "number": 63,
+          "name": "既濟",
+          "similarity": 0.239
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.217
+        },
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.2075
+        }
+      ],
+      "farthest": [
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.0099
+        },
+        {
+          "number": 20,
+          "name": "觀",
+          "similarity": 0.0286
+        },
+        {
+          "number": 44,
+          "name": "姤",
+          "similarity": 0.0312
+        }
+      ]
+    },
+    {
+      "number": 52,
+      "direction": [
+        0.96984215,
+        -0.20462216,
+        -0.13242345
+      ],
+      "canonicalTextLength": 59,
+      "nearest": [
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.2891
+        },
+        {
+          "number": 31,
+          "name": "咸",
+          "similarity": 0.2773
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2766
+        }
+      ],
+      "farthest": [
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0263
+        },
+        {
+          "number": 43,
+          "name": "夬",
+          "similarity": 0.0292
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0389
+        }
+      ]
+    },
+    {
+      "number": 53,
+      "direction": [
+        -0.89788154,
+        -0.13442546,
+        -0.41921181
+      ],
+      "canonicalTextLength": 65,
+      "nearest": [
+        {
+          "number": 13,
+          "name": "同人",
+          "similarity": 0.2936
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.248
+        },
+        {
+          "number": 5,
+          "name": "需",
+          "similarity": 0.2171
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0454
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.046
+        },
+        {
+          "number": 16,
+          "name": "豫",
+          "similarity": 0.0577
+        }
+      ]
+    },
+    {
+      "number": 54,
+      "direction": [
+        -0.63022814,
+        -0.74013756,
+        0.23453972
+      ],
+      "canonicalTextLength": 67,
+      "nearest": [
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.413
+        },
+        {
+          "number": 10,
+          "name": "履",
+          "similarity": 0.2854
+        },
+        {
+          "number": 19,
+          "name": "臨",
+          "similarity": 0.1228
+        }
+      ],
+      "farthest": [
+        {
+          "number": 42,
+          "name": "益",
+          "similarity": 0.0224
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0272
+        },
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0291
+        }
+      ]
+    },
+    {
+      "number": 55,
+      "direction": [
+        -0.31315434,
+        -0.75507231,
+        -0.57602098
+      ],
+      "canonicalTextLength": 51,
+      "nearest": [
+        {
+          "number": 62,
+          "name": "小過",
+          "similarity": 0.2901
+        },
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.2112
+        },
+        {
+          "number": 30,
+          "name": "離",
+          "similarity": 0.1965
+        }
+      ],
+      "farthest": [
+        {
+          "number": 20,
+          "name": "觀",
+          "similarity": 0.0383
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.0425
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.0471
+        }
+      ]
+    },
+    {
+      "number": 56,
+      "direction": [
+        -0.68593973,
+        0.02233701,
+        -0.72731544
+      ],
+      "canonicalTextLength": 73,
+      "nearest": [
+        {
+          "number": 52,
+          "name": "艮",
+          "similarity": 0.2891
+        },
+        {
+          "number": 13,
+          "name": "同人",
+          "similarity": 0.2296
+        },
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.1544
+        }
+      ],
+      "farthest": [
+        {
+          "number": 60,
+          "name": "節",
+          "similarity": 0.018
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.0291
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.0291
+        }
+      ]
+    },
+    {
+      "number": 57,
+      "direction": [
+        -0.3323772,
+        0.9426905,
+        0.0293261
+      ],
+      "canonicalTextLength": 58,
+      "nearest": [
+        {
+          "number": 1,
+          "name": "乾",
+          "similarity": 0.2985
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2302
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.2174
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0099
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0299
+        },
+        {
+          "number": 11,
+          "name": "泰",
+          "similarity": 0.0348
+        }
+      ]
+    },
+    {
+      "number": 58,
+      "direction": [
+        -0.66530785,
+        -0.24464758,
+        -0.70534603
+      ],
+      "canonicalTextLength": 42,
+      "nearest": [
+        {
+          "number": 17,
+          "name": "隨",
+          "similarity": 0.2247
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.2112
+        },
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.2106
+        }
+      ],
+      "farthest": [
+        {
+          "number": 22,
+          "name": "賁",
+          "similarity": 0.0274
+        },
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0291
+        },
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.0321
+        }
+      ]
+    },
+    {
+      "number": 59,
+      "direction": [
+        -0.49265039,
+        -0.86755817,
+        0.06810587
+      ],
+      "canonicalTextLength": 48,
+      "nearest": [
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.3483
+        },
+        {
+          "number": 9,
+          "name": "小畜",
+          "similarity": 0.2527
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.1835
+        }
+      ],
+      "farthest": [
+        {
+          "number": 62,
+          "name": "小過",
+          "similarity": 0.0375
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.041
+        },
+        {
+          "number": 17,
+          "name": "隨",
+          "similarity": 0.042
+        }
+      ]
+    },
+    {
+      "number": 60,
+      "direction": [
+        -0.23853555,
+        0.93587461,
+        0.2593058
+      ],
+      "canonicalTextLength": 48,
+      "nearest": [
+        {
+          "number": 23,
+          "name": "剝",
+          "similarity": 0.2422
+        },
+        {
+          "number": 27,
+          "name": "頤",
+          "similarity": 0.2218
+        },
+        {
+          "number": 32,
+          "name": "恒",
+          "similarity": 0.2096
+        }
+      ],
+      "farthest": [
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.018
+        },
+        {
+          "number": 54,
+          "name": "歸妹",
+          "similarity": 0.052
+        },
+        {
+          "number": 12,
+          "name": "否",
+          "similarity": 0.0533
+        }
+      ]
+    },
+    {
+      "number": 61,
+      "direction": [
+        -0.83898434,
+        0.12408688,
+        0.52981858
+      ],
+      "canonicalTextLength": 68,
+      "nearest": [
+        {
+          "number": 9,
+          "name": "小畜",
+          "similarity": 0.2909
+        },
+        {
+          "number": 29,
+          "name": "坎",
+          "similarity": 0.2113
+        },
+        {
+          "number": 28,
+          "name": "大過",
+          "similarity": 0.1971
+        }
+      ],
+      "farthest": [
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.0315
+        },
+        {
+          "number": 56,
+          "name": "旅",
+          "similarity": 0.0333
+        },
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0343
+        }
+      ]
+    },
+    {
+      "number": 62,
+      "direction": [
+        -0.34497316,
+        0.34705121,
+        -0.87209459
+      ],
+      "canonicalTextLength": 63,
+      "nearest": [
+        {
+          "number": 55,
+          "name": "豐",
+          "similarity": 0.2901
+        },
+        {
+          "number": 28,
+          "name": "大過",
+          "similarity": 0.223
+        },
+        {
+          "number": 58,
+          "name": "兌",
+          "similarity": 0.1821
+        }
+      ],
+      "farthest": [
+        {
+          "number": 10,
+          "name": "履",
+          "similarity": 0.0374
+        },
+        {
+          "number": 59,
+          "name": "渙",
+          "similarity": 0.0375
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.0384
+        }
+      ]
+    },
+    {
+      "number": 63,
+      "direction": [
+        0.40827922,
+        -0.19180391,
+        -0.89247932
+      ],
+      "canonicalTextLength": 83,
+      "nearest": [
+        {
+          "number": 64,
+          "name": "未濟",
+          "similarity": 0.4257
+        },
+        {
+          "number": 38,
+          "name": "睽",
+          "similarity": 0.2698
+        },
+        {
+          "number": 51,
+          "name": "震",
+          "similarity": 0.239
+        }
+      ],
+      "farthest": [
+        {
+          "number": 57,
+          "name": "巽",
+          "similarity": 0.0353
+        },
+        {
+          "number": 6,
+          "name": "訟",
+          "similarity": 0.0388
+        },
+        {
+          "number": 47,
+          "name": "困",
+          "similarity": 0.0391
+        }
+      ]
+    },
+    {
+      "number": 64,
+      "direction": [
+        0.74284911,
+        -0.13484223,
+        -0.65573834
+      ],
+      "canonicalTextLength": 54,
+      "nearest": [
+        {
+          "number": 63,
+          "name": "既濟",
+          "similarity": 0.4257
+        },
+        {
+          "number": 34,
+          "name": "大壯",
+          "similarity": 0.2678
+        },
+        {
+          "number": 31,
+          "name": "咸",
+          "similarity": 0.2419
+        }
+      ],
+      "farthest": [
+        {
+          "number": 39,
+          "name": "蹇",
+          "similarity": 0.0209
+        },
+        {
+          "number": 36,
+          "name": "明夷",
+          "similarity": 0.0241
+        },
+        {
+          "number": 3,
+          "name": "屯",
+          "similarity": 0.026
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "app": "易·宇宙",
+  "buildType": "static-multipage",
+  "threeVersion": "0.179.1",
+  "entrypoints": [
+    "/",
+    "/divination/",
+    "/star-map/",
+    "/life-history/"
+  ],
+  "files": [
+    {
+      "path": "app.js",
+      "bytes": 48598,
+      "sha256": "443d6fb88a997b6b0127d505bbd2ab0c7e910a1cb88136cdbc111b5b7484d805"
+    },
+    {
+      "path": "data/DATA_MANIFEST.json",
+      "bytes": 2237,
+      "sha256": "7c71724a7656f94af2281328ffa4bf7385144660f942e2af9d559efd6b7ef383"
+    },
+    {
+      "path": "data/canonical-translations.json",
+      "bytes": 38281,
+      "sha256": "c7e256a0818670b1869d011b1460b1fde954d56e4d467e68c471646ef584ae3d"
+    },
+    {
+      "path": "data/scholar-life-map.js",
+      "bytes": 1876,
+      "sha256": "aa2c514f503cbd4fc0f6a88a0f41658262f7d3a892be3dfb53e7284ec4776a16"
+    },
+    {
+      "path": "data/semantic-layout.json",
+      "bytes": 55440,
+      "sha256": "77aa7d32d5f22286a70dc880c72fed4d5dbb5f80a24bdc214c4944768cc74198"
+    },
+    {
+      "path": "data/star-data.js",
+      "bytes": 7637,
+      "sha256": "c4d1e5c42a9da2799b2bdb5c51c17afab5cdd853d21f672a9a1c4be6224ce908"
+    },
+    {
+      "path": "data/zhouyi-integrated-v1.json",
+      "bytes": 8105995,
+      "sha256": "fcfdb1c0ec740e3ecffdc577ee3411e22c689b6aa832e6adf27fad3e161633ca"
+    },
+    {
+      "path": "data/zhouyi-integrated-v2.json",
+      "bytes": 10283994,
+      "sha256": "639fccd40b83a4ec8c722a0afc76f211db0e392a9d40b66ef3dcaf3d9a5cf86c"
+    },
+    {
+      "path": "data/zhouyi-jijie.json",
+      "bytes": 1506787,
+      "sha256": "15d83cce862c33dfa864e1f75e572862c04330f7fc9370d951b96e7fac41e990"
+    },
+    {
+      "path": "divination/app.js",
+      "bytes": 48118,
+      "sha256": "c0c8aa4ce3287dc6589b8949327ecb939d06a1008656508fc07b01c6d15b583c"
+    },
+    {
+      "path": "divination/index.html",
+      "bytes": 7594,
+      "sha256": "914aa7cf465713ea9af21dbf305851ad4119bdd90e44f7f30d52fc8f7b9d74fe"
+    },
+    {
+      "path": "divination/styles.css",
+      "bytes": 20529,
+      "sha256": "38e111e5cffcad1b92f0b56c56186a5684e491a63df5136c1235aee399c18834"
+    },
+    {
+      "path": "home.css",
+      "bytes": 9164,
+      "sha256": "30c339f6b12e57853d37a00c8c48a78e0dfac68d0c7901c8b7b5252fe4f1bf35"
+    },
+    {
+      "path": "home.js",
+      "bytes": 11905,
+      "sha256": "2a65f0750c1b86c0b85e2145ec594b05021c691c07616dbe1d15e92111599a8a"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3979,
+      "sha256": "387e23726e1af6f55492dc8884c84b72c7afe8ccc1edb5018bda5a7cdf77d879"
+    },
+    {
+      "path": "life-history/app.js",
+      "bytes": 64811,
+      "sha256": "065fe287710443bdec2f01a407448f4e21505147e306712544d350f0fa51aa51"
+    },
+    {
+      "path": "life-history/data/life-history-data.js",
+      "bytes": 4491,
+      "sha256": "864f62033e6618b999b65e39c9e078de780b5bd9dbadba9f463bee39e72a0956"
+    },
+    {
+      "path": "life-history/data/life-history-v2-compat.json",
+      "bytes": 45291,
+      "sha256": "8a1dca51c5a850b9bb2b446689191582480000dc5c85394e9b8d015a10042a71"
+    },
+    {
+      "path": "life-history/data/life-history-v2-review.json",
+      "bytes": 2853,
+      "sha256": "46c1702ffe8bbc466ef573fdf1953dbb68d03a699340d882752c72822bb8d728"
+    },
+    {
+      "path": "life-history/data/life-history-v2.json",
+      "bytes": 341920,
+      "sha256": "78616bba4a0c833cd8d14f3c55a6035cda90ea8c234d4acdc77a3f98cf32ba6e"
+    },
+    {
+      "path": "life-history/data/life-history-v2.schema.json",
+      "bytes": 8745,
+      "sha256": "a4e025681ce133e7ea6a773cc59cd2a98b2788fd22cba78646b05e42aabae32e"
+    },
+    {
+      "path": "life-history/data/life-history.json",
+      "bytes": 8312,
+      "sha256": "4c63c8962e03b80bc80211320e6d0ecc43cbe72e85d71b59aa913db2c86789ba"
+    },
+    {
+      "path": "life-history/index.html",
+      "bytes": 5536,
+      "sha256": "5fa0423a908d10d29cc6b5c16f3954c7895a1e7d802143c47ad354377eb9b3fe"
+    },
+    {
+      "path": "life-history/styles.css",
+      "bytes": 17134,
+      "sha256": "1ea25747abf369148e9a56a980610ab9eec9e11d333eca8beb7f131b990a3c83"
+    },
+    {
+      "path": "node_modules/three/LICENSE",
+      "bytes": 1081,
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "path": "node_modules/three/build/three.core.js",
+      "bytes": 1401321,
+      "sha256": "3cd45beb4da9ce682bb7f5894dafd8a146379aa4b6b5aa3acd9ef5d47fdaaf92"
+    },
+    {
+      "path": "node_modules/three/build/three.module.js",
+      "bytes": 603380,
+      "sha256": "ce6be0cb5ead0027e1f6094dd82ad43bba0886c03324a3b21fd9a33ac93fc2b4"
+    },
+    {
+      "path": "route-state.js",
+      "bytes": 9696,
+      "sha256": "5ec40f379e5c492327e06e37d3b5329f7284e067860ebffa942f39b51a93565d"
+    },
+    {
+      "path": "shared-shell.css",
+      "bytes": 9733,
+      "sha256": "b758c2417a898667007b164662e371d0fb5ff0aa5ee29c14de704d5476091a6b"
+    },
+    {
+      "path": "shared-shell.js",
+      "bytes": 11901,
+      "sha256": "075fb1ca024f74f69d0223e1e07e22b3b6e50ced36e232ce771114ad7de73a3e"
+    },
+    {
+      "path": "star-map/index.html",
+      "bytes": 4809,
+      "sha256": "ff22d74e045967c5c25c68f4edf6ace6317813eee08374c14d1b85ed0d625d85"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 23016,
+      "sha256": "1baff423e4aae977059bcf44dc3a800a8d81eb1d47432218b193f73f792387c2"
+    }
+  ]
+}

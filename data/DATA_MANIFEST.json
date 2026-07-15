@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "1.0.0",
+  "encoding": "UTF-8",
+  "files": [
+    {
+      "path": "data/canonical-translations.json",
+      "role": "canonical-translation-archive",
+      "bytes": 38281,
+      "sha256": "c7e256a0818670b1869d011b1460b1fde954d56e4d467e68c471646ef584ae3d"
+    },
+    {
+      "path": "data/semantic-layout.json",
+      "role": "semantic-layout",
+      "bytes": 55440,
+      "sha256": "77aa7d32d5f22286a70dc880c72fed4d5dbb5f80a24bdc214c4944768cc74198"
+    },
+    {
+      "path": "data/zhouyi-integrated-v1.json",
+      "role": "integrated-v1-archive",
+      "bytes": 8105995,
+      "sha256": "fcfdb1c0ec740e3ecffdc577ee3411e22c689b6aa832e6adf27fad3e161633ca"
+    },
+    {
+      "path": "data/zhouyi-integrated-v2.json",
+      "role": "primary-star-data",
+      "bytes": 10283994,
+      "sha256": "639fccd40b83a4ec8c722a0afc76f211db0e392a9d40b66ef3dcaf3d9a5cf86c"
+    },
+    {
+      "path": "data/zhouyi-jijie.json",
+      "role": "jijie-source-archive",
+      "bytes": 1506787,
+      "sha256": "15d83cce862c33dfa864e1f75e572862c04330f7fc9370d951b96e7fac41e990"
+    },
+    {
+      "path": "life-history/data/life-history-v2.json",
+      "role": "primary-life-history-data",
+      "bytes": 341920,
+      "sha256": "78616bba4a0c833cd8d14f3c55a6035cda90ea8c234d4acdc77a3f98cf32ba6e"
+    },
+    {
+      "path": "life-history/data/life-history-v2.schema.json",
+      "role": "life-history-schema",
+      "bytes": 8745,
+      "sha256": "a4e025681ce133e7ea6a773cc59cd2a98b2788fd22cba78646b05e42aabae32e"
+    },
+    {
+      "path": "life-history/data/life-history-v2-compat.json",
+      "role": "life-history-compatibility",
+      "bytes": 45291,
+      "sha256": "8a1dca51c5a850b9bb2b446689191582480000dc5c85394e9b8d015a10042a71"
+    },
+    {
+      "path": "life-history/data/life-history-v2-review.json",
+      "role": "life-history-review",
+      "bytes": 2853,
+      "sha256": "46c1702ffe8bbc466ef573fdf1953dbb68d03a699340d882752c72822bb8d728"
+    },
+    {
+      "path": "life-history/data/life-history.json",
+      "role": "life-history-legacy",
+      "bytes": 8312,
+      "sha256": "4c63c8962e03b80bc80211320e6d0ecc43cbe72e85d71b59aa913db2c86789ba"
+    }
+  ]
+}

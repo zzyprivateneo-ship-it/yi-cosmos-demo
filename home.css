@@ -1,0 +1,323 @@
+:root {
+  color-scheme: dark;
+  --home-ink: #f4f5f2;
+  --home-muted: rgba(230, 232, 229, .46);
+  --home-faint: rgba(230, 232, 229, .2);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; background: #000000; }
+body.yx-page-home {
+  min-width: 320px;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--home-ink);
+  background: #000000;
+  font-family: "Microsoft YaHei Light", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+#home-sky {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: #000;
+}
+
+.home-grain,
+.home-vignette {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+}
+
+.home-vignette {
+  background:
+    radial-gradient(ellipse at 50% 48%, transparent 28%, rgba(0, 0, 0, .18) 64%, rgba(0, 0, 0, .76) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.42), transparent 24%, transparent 76%, rgba(0,0,0,.42));
+}
+
+.home-grain {
+  opacity: .16;
+  background-image:
+    repeating-radial-gradient(circle at 24% 31%, rgba(255,255,255,.025) 0 1px, transparent 1px 4px),
+    repeating-linear-gradient(117deg, transparent 0 9px, rgba(255,255,255,.012) 10px, transparent 11px 18px);
+  mix-blend-mode: screen;
+}
+
+.home-main { position: relative; z-index: 2; }
+
+.home-hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 90px 24px 64px;
+  text-align: center;
+}
+
+.hero-copy { transform: translateY(-1.5vh); }
+.hero-kicker {
+  margin: 0 0 clamp(24px, 4vh, 44px);
+  color: var(--home-muted);
+  font-size: clamp(8px, .7vw, 11px);
+  letter-spacing: .58em;
+  text-indent: .58em;
+}
+
+.hero-title {
+  margin: 0;
+  color: rgba(248, 249, 247, .94);
+  font-family: "华光纤白银线 UltraLight", "Microsoft YaHei Light", "DengXian Light", sans-serif;
+  font-size: clamp(78px, 14vw, 208px);
+  font-weight: 100;
+  font-synthesis: none;
+  line-height: .9;
+  letter-spacing: .2em;
+  text-indent: .2em;
+  text-shadow: 0 0 28px rgba(255,255,255,.07);
+  transform: scaleX(.8) scaleY(1.08);
+}
+
+.hero-statement {
+  margin: clamp(34px, 6vh, 64px) 0 0;
+  color: rgba(236, 238, 235, .58);
+  font-family: "Songti SC", SimSun, serif;
+  font-size: clamp(12px, 1vw, 16px);
+  letter-spacing: .32em;
+  text-indent: .32em;
+}
+
+.scroll-cue {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 9px;
+  color: rgba(255,255,255,.64);
+  text-decoration: none;
+  font-size: 8px;
+  letter-spacing: .18em;
+  text-shadow: 0 0 8px rgba(255,255,255,.16);
+  transform: translateX(-50%);
+  transition: color 180ms ease, text-shadow 180ms ease;
+}
+.scroll-cue:hover { color: #fff; text-shadow: 0 0 14px rgba(255,255,255,.72), 0 0 34px rgba(255,255,255,.25); }
+.scroll-cue span {
+  font-size: 15px;
+  letter-spacing: .28em;
+  text-indent: .28em;
+  animation: entrance-breathe 2.8s ease-in-out infinite;
+}
+.scroll-cue i {
+  position: relative;
+  display: block;
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(white, transparent);
+  opacity: .72;
+}
+.scroll-cue i::after {
+  content: "";
+  position: absolute;
+  right: -3px;
+  bottom: 1px;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid rgba(255,255,255,.8);
+  border-bottom: 1px solid rgba(255,255,255,.8);
+  transform: rotate(45deg);
+}
+@keyframes entrance-breathe {
+  0%, 100% { opacity: .5; text-shadow: 0 0 7px rgba(255,255,255,.1); }
+  50% { opacity: 1; text-shadow: 0 0 13px rgba(255,255,255,.55), 0 0 30px rgba(255,255,255,.18); }
+}
+
+.home-portals {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  align-content: center;
+  padding: 110px clamp(24px, 7vw, 110px) 90px;
+}
+
+.portals-heading { width: 100%; max-width: none; margin-bottom: clamp(42px, 7vh, 84px); }
+.portals-eyebrow { margin: 0 0 16px; color: var(--home-muted); font-size: 9px; letter-spacing: .42em; }
+.portals-heading h2 {
+  margin: 0;
+  font-family: "Songti SC", SimSun, serif;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: 300;
+  line-height: 1.45;
+  letter-spacing: .08em;
+}
+.portals-heading h2 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.portal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--home-faint); }
+.portal-card {
+  position: relative;
+  min-height: 280px;
+  padding: 34px 30px 28px;
+  overflow: hidden;
+  color: inherit;
+  border-right: 1px solid var(--home-faint);
+  text-decoration: none;
+  transition: background 260ms ease;
+}
+.portal-card:last-child { border-right: 0; }
+.portal-card::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 18px 5px rgba(255,255,255,.22), 0 0 86px 30px rgba(255,255,255,.035);
+  opacity: .42;
+  transition: opacity 260ms ease, transform 500ms ease;
+}
+.portal-card:hover { background: rgba(255,255,255,.025); }
+.portal-card:hover::before {
+  opacity: 1;
+  transform: scale(5.5);
+  box-shadow: 0 0 7px 2px rgba(255,255,255,.62), 0 0 28px 9px rgba(255,255,255,.16), 0 0 100px 34px rgba(255,255,255,.045);
+}
+.portal-number { color: rgba(255,255,255,.28); font-size: 9px; letter-spacing: .16em; }
+.portal-card h3 { margin: 88px 0 12px; font-size: clamp(24px, 2.4vw, 38px); font-weight: 200; letter-spacing: .28em; }
+.portal-card p { max-width: 300px; margin: 0; color: var(--home-muted); font: 13px/1.9 "Songti SC", SimSun, serif; letter-spacing: .08em; }
+.portal-enter { position: absolute; right: 26px; bottom: 25px; color: rgba(255,255,255,.48); font-size: 10px; letter-spacing: .16em; }
+
+.home-footer {
+  position: relative;
+  padding: 24px clamp(24px, 7vw, 110px) 34px;
+  color: rgba(255,255,255,.28);
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: 8px;
+  letter-spacing: .24em;
+}
+
+@media (max-width: 760px) {
+  .home-hero { padding-inline: 16px; }
+  .hero-title { font-size: clamp(68px, 22vw, 130px); letter-spacing: .1em; text-indent: .1em; transform: scaleX(.78) scaleY(1.1); }
+  .hero-statement { line-height: 2; }
+  .home-portals { padding: 90px 20px 60px; }
+  .portals-heading h2 { font-size: clamp(19px, 5.8vw, 28px); letter-spacing: .03em; }
+  .portal-grid { grid-template-columns: 1fr; }
+  .portal-card { min-height: 220px; border-right: 0; border-bottom: 1px solid var(--home-faint); }
+  .portal-card h3 { margin-top: 54px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* ============================================================
+   目标项目专属规则（无障碍 / 触控 / 安全区域 / 诊断变量）
+   ============================================================ */
+
+/* 目标独有 CSS 变量（--yx-home-* 别名，兼容诊断接口） */
+:root {
+  --yx-home-ink: var(--home-ink);
+  --yx-home-muted: var(--home-muted);
+  --yx-home-faint: var(--home-faint);
+}
+
+/* 键盘焦点可见性增强（无障碍） */
+.portal-card:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, .5);
+  outline-offset: -1px;
+  background: rgba(255, 255, 255, .025);
+}
+.portal-card:focus-visible::before {
+  opacity: 1;
+  transform: scale(5.5);
+  box-shadow: 0 0 7px 2px rgba(255,255,255,.62), 0 0 28px 9px rgba(255,255,255,.16), 0 0 100px 34px rgba(255,255,255,.045);
+}
+.portal-card:focus-visible .portal-enter {
+  color: rgba(255, 255, 255, .88);
+}
+.scroll-cue:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, .5);
+  outline-offset: 4px;
+}
+
+/* env(safe-area-inset) 适配 */
+.home-footer {
+  padding-bottom: max(34px, env(safe-area-inset-bottom));
+}
+.home-portals {
+  padding-left: max(clamp(24px, 7vw, 110px), env(safe-area-inset-left));
+  padding-right: max(clamp(24px, 7vw, 110px), env(safe-area-inset-right));
+}
+
+/* hover: none 适配 —— 触屏设备移除悬停特效 */
+@media (hover: none) {
+  .portal-card:hover { background: transparent; }
+  .portal-card:hover::before {
+    opacity: .42;
+    transform: scale(1);
+    box-shadow: 0 0 18px 5px rgba(255,255,255,.22), 0 0 86px 30px rgba(255,255,255,.035);
+  }
+  .portal-card:hover .portal-enter { color: rgba(255, 255, 255, .48); }
+  .scroll-cue:hover { color: rgba(255, 255, 255, .64); text-shadow: 0 0 8px rgba(255, 255, 255, .16); }
+}
+
+/* pointer: coarse 适配 —— 增大触控目标 */
+@media (pointer: coarse) {
+  .scroll-cue {
+    min-width: 48px;
+    min-height: 64px;
+    padding: 8px 12px;
+  }
+  .portal-card {
+    min-height: 220px;
+  }
+}
+
+/* forced-colors: active 适配 */
+@media (forced-colors: active) {
+  .hero-title,
+  .portals-heading h2,
+  .portal-card h3 {
+    color: CanvasText;
+  }
+  .portal-card {
+    border-color: CanvasText;
+  }
+  .portal-card:not(:last-child) {
+    border-right-color: CanvasText;
+  }
+  .portal-card::before {
+    background: CanvasText;
+  }
+  .home-footer {
+    border-top-color: CanvasText;
+    color: CanvasText;
+  }
+}
+
+/* prefers-reduced-motion: reduce 目标专属补充 */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue span {
+    animation: none;
+    opacity: .78;
+  }
+  .portal-card,
+  .portal-card::before,
+  .portal-enter {
+    transition-duration: .01ms;
+  }
+}

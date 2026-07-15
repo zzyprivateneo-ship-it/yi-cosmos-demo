@@ -1,0 +1,90 @@
+{
+  "schemaVersion": "2.0.0",
+  "sourceId": "source:zhouyi-yanjiushi-1991",
+  "items": [
+    {
+      "id": "review:001",
+      "priority": "high",
+      "type": "source_boundary",
+      "location": {
+        "lineStart": 4125,
+        "lineEnd": 4740
+      },
+      "issue": "正文之后混入图书元数据和重复目录。",
+      "recommendation": "元数据单独保存，重复目录不进入正文抽取。"
+    },
+    {
+      "id": "review:002",
+      "priority": "high",
+      "type": "name_conflict",
+      "location": {
+        "lineStart": 1,
+        "lineEnd": 5
+      },
+      "issue": "书名行与前言对第三位作者姓名存在“康学佳/康学伟”差异。",
+      "recommendation": "核对书影版权页后确定规范名，暂以康学伟为候选。"
+    },
+    {
+      "id": "review:003",
+      "priority": "high",
+      "type": "ocr_heading",
+      "location": {
+        "lineStart": 1602,
+        "lineEnd": 1602
+      },
+      "issue": "标题“王冠易学”疑为“王弼易学”。",
+      "recommendation": "核对原书目录与书影，不静默覆盖原文。"
+    },
+    {
+      "id": "review:004",
+      "priority": "medium",
+      "type": "ocr_heading",
+      "location": {
+        "lineStart": 1266,
+        "lineEnd": 1266
+      },
+      "issue": "正文标题“费宣学派”与目录“费直学派”不一致。",
+      "recommendation": "核对原书，当前实体按费直建立并保留疑点。"
+    },
+    {
+      "id": "review:005",
+      "priority": "medium",
+      "type": "ocr_heading",
+      "location": {
+        "lineStart": 2996,
+        "lineEnd": 2996
+      },
+      "issue": "“现代的义理派宋易”疑为“明代的义理派宋易”。",
+      "recommendation": "核对原书章节标题。"
+    },
+    {
+      "id": "review:006",
+      "priority": "high",
+      "type": "chronology",
+      "entityId": "person:lidingzuo",
+      "issue": "李鼎祚生卒年不确，当前区间仅用于视觉定位。",
+      "recommendation": "引入权威工具书后区分生卒与活动年代。"
+    },
+    {
+      "id": "review:007",
+      "priority": "high",
+      "type": "authorship",
+      "entityId": "work:cantongqi",
+      "issue": "《周易参同契》作者与成书年代存在争议。",
+      "recommendation": "保留多来源断言，不将传统归属显示成无争议事实。"
+    },
+    {
+      "id": "review:008",
+      "priority": "medium",
+      "type": "relation",
+      "relationId": "relation:0139",
+      "issue": "孟喜—京房之间存在焦延寿等传承环节，当前视觉关系作了简化。",
+      "recommendation": "后续加入焦延寿并重建完整师承链。"
+    }
+  ],
+  "summary": {
+    "total": 8,
+    "high": 5,
+    "medium": 3
+  }
+}

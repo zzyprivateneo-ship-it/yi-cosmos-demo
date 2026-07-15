@@ -1,0 +1,363 @@
+:root {
+  --yx-shell-ink: rgba(244, 245, 242, .9);
+  --yx-shell-muted: rgba(225, 228, 225, .48);
+  --yx-shell-line: rgba(238, 240, 237, .12);
+  --yx-shell-bg: rgba(1, 2, 3, .72);
+}
+
+.yx-sitebar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 54px;
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) auto minmax(120px, 1fr);
+  align-items: center;
+  padding: 0 28px;
+  color: var(--yx-shell-ink);
+  background: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .48) 72%, transparent);
+  font-family: "Microsoft YaHei Light", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.yx-sitebar > * { pointer-events: auto; }
+
+.yx-brand {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #f4f5f2;
+  text-decoration: none;
+  font-family: "华光纤白银线 UltraLight", "Microsoft YaHei Light", "DengXian Light", sans-serif;
+  font-weight: 100;
+  letter-spacing: .2em;
+  font-size: 16px;
+  text-indent: .2em;
+  transform: scaleX(.88);
+  transform-origin: left center;
+}
+
+.yx-brand::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 9px rgba(255, 255, 255, .92), 0 0 24px rgba(255, 255, 255, .32);
+}
+
+.yx-global-nav {
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 3vw, 44px);
+  height: 100%;
+}
+
+.yx-global-nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  color: var(--yx-shell-muted);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: .22em;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+
+.yx-global-nav a::after {
+  content: "";
+  position: absolute;
+  right: .22em;
+  bottom: 8px;
+  left: 0;
+  height: 1px;
+  background: #fff;
+  opacity: 0;
+  transform: scaleX(.25);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.yx-global-nav a:hover,
+.yx-global-nav a[aria-current="page"] { color: #fff; }
+.yx-global-nav a[aria-current="page"]::after { opacity: .72; transform: scaleX(1); }
+
+.yx-site-caption {
+  justify-self: end;
+  margin: 0;
+  color: rgba(225, 228, 225, .28);
+  font-size: 8px;
+  letter-spacing: .24em;
+  white-space: nowrap;
+}
+
+/* 独立页面之间共享同一组“向右航行”转场。旧宇宙向左退场，新宇宙从右侧接续。 */
+.home-main,
+#home-sky,
+.yx-page-star #app,
+.yx-page-divination #gua-app,
+.yx-page-life #life-app,
+.yx-sitebar {
+  transition:
+    transform 980ms cubic-bezier(.55, 0, .2, 1),
+    opacity 820ms ease,
+    filter 820ms ease;
+  will-change: transform, opacity;
+}
+
+.yx-route-leaving .home-main,
+.yx-route-leaving .yx-page-star #app,
+.yx-route-leaving .yx-page-divination #gua-app,
+.yx-route-leaving .yx-page-life #life-app {
+  opacity: .08;
+  filter: blur(2px);
+  transform: translate3d(-13vw, 0, 0) scale(.985);
+}
+
+.yx-route-leaving #home-sky { transform: translate3d(-9vw, 0, 0) scale(1.025); }
+.yx-route-leaving .yx-sitebar { opacity: 0; transform: translate3d(-5vw, 0, 0); }
+
+.yx-route-arriving .home-main,
+.yx-route-arriving .yx-page-star #app,
+.yx-route-arriving .yx-page-divination #gua-app,
+.yx-route-arriving .yx-page-life #life-app {
+  opacity: .08;
+  filter: blur(2px);
+  transform: translate3d(13vw, 0, 0) scale(.985);
+}
+
+.yx-route-arriving #home-sky { transform: translate3d(9vw, 0, 0) scale(1.025); }
+.yx-route-arriving .yx-sitebar { opacity: 0; transform: translate3d(5vw, 0, 0); }
+
+.yx-route-cosmos {
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, rgba(8, 9, 10, .32), rgba(0, 0, 0, .96) 74%),
+    #000;
+  transition: opacity 360ms ease, visibility 0s linear 720ms;
+}
+
+.yx-route-cosmos.is-active {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 320ms ease, visibility 0s;
+}
+
+.yx-route-cosmos-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.yx-route-cosmos-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: rgba(242, 244, 241, .7);
+  font-family: "华光纤白银线 UltraLight", "Microsoft YaHei Light", "DengXian Light", sans-serif;
+  font-size: clamp(13px, 1.5vw, 23px);
+  font-weight: 100;
+  letter-spacing: .48em;
+  text-indent: .48em;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, -50%) scaleX(.78);
+  transition: opacity 240ms ease 120ms;
+}
+
+.yx-route-cosmos-title i {
+  width: clamp(38px, 7vw, 110px);
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,.42), transparent);
+}
+
+.yx-route-cosmos.is-active .yx-route-cosmos-title { opacity: 1; }
+
+/* 三个子页面移除重复返回按钮后，仍保持各自标题居中。 */
+.yx-page-divination .masthead > .title-block { grid-column: 2; }
+.yx-page-divination .masthead > .phase-nav { grid-column: 3; }
+.yx-page-life .masthead > .title-block { grid-column: 2; }
+.yx-page-life .masthead > .header-actions { grid-column: 3; }
+
+/* 星点光标：默认是一颗发光小星，进入交互区时只保留白色光圈。 */
+.yx-cursor {
+  position: fixed;
+  z-index: 5000;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  transition: opacity 140ms ease;
+}
+
+.yx-cursor.is-visible { opacity: 1; }
+.yx-route-leaving .yx-cursor { opacity: 0; }
+
+.yx-cursor-core,
+.yx-cursor::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transition: width 150ms ease, height 150ms ease, opacity 150ms ease, transform 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.yx-cursor-core {
+  width: 4px;
+  height: 4px;
+  margin: -2px 0 0 -2px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 5px #fff, 0 0 13px rgba(255,255,255,.76), 0 0 26px rgba(255,255,255,.22);
+}
+
+.yx-cursor::before {
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 1px solid rgba(255,255,255,.88);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(255,255,255,.24), inset 0 0 5px rgba(255,255,255,.06);
+  transform: scale(.55);
+}
+
+.yx-cursor.is-interactive::before { opacity: 1; transform: scale(1); }
+.yx-cursor.is-interactive .yx-cursor-core { opacity: 0; }
+.yx-cursor.is-interactive.is-pressed::before { transform: scale(.62); }
+
+/* 星图和生命史共用同一组右上角工具按钮。归位固定在最右，索引紧邻其左。 */
+.yx-page-star .masthead > .header-actions,
+.yx-page-life .masthead > .header-actions {
+  position: fixed;
+  z-index: 30;
+  top: 78px;
+  right: 28px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.yx-tool-button {
+  box-sizing: border-box;
+  min-width: 60px;
+  height: 34px;
+  padding: 0 13px;
+  border: 1px solid rgba(229,232,229,.16);
+  border-radius: 999px;
+  color: rgba(238,240,237,.72);
+  background: rgba(6,8,10,.54);
+  font-family: "Microsoft YaHei Light", "DengXian Light", "PingFang SC", sans-serif;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: .13em;
+  text-align: center;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.yx-tool-button:hover {
+  color: #fff;
+  border-color: rgba(238,240,236,.34);
+  background: rgba(255,255,255,.065);
+  box-shadow: 0 0 18px rgba(255,255,255,.035);
+}
+
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button,
+  input,
+  textarea,
+  select,
+  label,
+  [role="button"],
+  [tabindex],
+  canvas { cursor: none !important; }
+}
+
+/* 为三套既有应用留出统一站点导航的空间。 */
+.yx-page-star .masthead { top: 62px; }
+.yx-page-star .line-controls { top: 152px; }
+.yx-page-star .index-panel { top: 154px; }
+.yx-page-star .focus-stage { top: 146px; }
+
+.yx-page-divination #gua-app {
+  height: 100%;
+  padding-top: 54px;
+}
+
+.yx-page-life .masthead { top: 54px; }
+.yx-page-life .relation-controls { top: 146px; }
+.yx-page-life .detail-panel { top: 172px; }
+
+@media (max-width: 760px) {
+  .yx-sitebar {
+    grid-template-columns: auto 1fr;
+    height: 50px;
+    padding: 0 14px;
+  }
+  .yx-brand { font-size: 13px; }
+  .yx-global-nav { justify-self: end; gap: 13px; }
+  .yx-global-nav a { font-size: 9px; letter-spacing: .12em; }
+  .yx-site-caption { display: none; }
+  .yx-page-star .masthead { top: 52px; }
+  .yx-page-star .line-controls { top: 140px; }
+  .yx-page-star .index-panel { top: 138px; }
+  .yx-page-star .focus-stage { top: 138px; }
+  .yx-page-divination #gua-app { padding-top: 50px; }
+  .yx-page-life .masthead { top: 50px; }
+  .yx-page-life .relation-controls { top: 140px; }
+  .yx-page-life .detail-panel { top: 190px; }
+  .yx-page-star .masthead > .header-actions,
+  .yx-page-life .masthead > .header-actions { top: 68px; right: 14px; gap: 6px; }
+  .yx-tool-button { min-width: 50px; height: 30px; padding: 0 10px; font-size: 9px; line-height: 28px; }
+}
+
+@media (max-width: 900px) {
+  .yx-page-life .masthead > .title-block { grid-column: 1 / -1; grid-row: 1; }
+  .yx-page-life .masthead > .header-actions { grid-column: 2; grid-row: 1; }
+}
+
+@media (max-width: 620px) {
+  .yx-page-divination .masthead > .title-block { grid-column: 1 / -1; justify-self: center; }
+}
+
+@media (max-width: 480px) {
+  .yx-sitebar { grid-template-columns: auto 1fr; padding: 0 10px; }
+  .yx-brand { gap: 7px; font-size: 12px; letter-spacing: .16em; text-indent: .16em; }
+  .yx-global-nav { gap: 8px; }
+  .yx-global-nav a { font-size: 8px; letter-spacing: .06em; }
+  .yx-page-life .detail-panel { top: auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-main,
+  #home-sky,
+  .yx-page-star #app,
+  .yx-page-divination #gua-app,
+  .yx-page-life #life-app,
+  .yx-sitebar { transition-duration: .01ms !important; }
+}

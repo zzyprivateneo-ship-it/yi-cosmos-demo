@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#010101" />
+  <title>易·宇宙 · 问卦</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext y='52' x='50' text-anchor='middle' dominant-baseline='middle' fill='%23fff' font-size='50'%3E%E2%98%B0%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css?v=20260715-stage18" />
+  <link rel="stylesheet" href="../shared-shell.css?v=20260715-stage18" />
+  <script src="../shared-shell.js?v=20260715-stage18"></script>
+</head>
+<body class="yx-page-divination">
+  <canvas id="ritual-sky" aria-hidden="true"></canvas>
+
+  <header class="yx-sitebar">
+    <a class="yx-brand" href="../" aria-label="易·宇宙首页">易·宇宙</a>
+    <nav class="yx-global-nav" aria-label="易·宇宙主导航">
+      <a href="../">首页</a>
+      <a href="./" aria-current="page">问卦</a>
+      <a href="../star-map/">星图</a>
+      <a href="../life-history/">生命史</a>
+    </nav>
+    <p class="yx-site-caption">YI · COSMOS</p>
+  </header>
+
+  <main id="gua-app" data-current-stage="ask">
+    <header class="masthead">
+      <div class="title-block">
+        <p class="eyebrow">易·宇宙 · DIVINATION</p>
+        <h1>问卦</h1>
+      </div>
+
+      <nav class="phase-nav" aria-label="问卦步骤">
+        <span class="phase active" data-phase="ask" aria-current="step"><i>01</i> 问</span>
+        <span class="phase" data-phase="cast"><i>02</i> 筮</span>
+        <span class="phase" data-phase="reveal"><i>03</i> 得</span>
+      </nav>
+    </header>
+
+    <section class="stage" aria-live="polite">
+      <!-- 阶段一：问 -->
+      <div class="panel panel-ask" data-stage="ask">
+        <div class="ask-inner">
+          <p class="stage-number" aria-hidden="true">01</p>
+          <div class="ask-hex-cycle" aria-label="六十四卦依次演变">
+            <div id="ask-hexagram" class="hexagram ask-hexagram" aria-hidden="true"></div>
+            <p class="cycle-caption"><span id="cycle-number">01</span><span id="cycle-name">乾</span></p>
+          </div>
+          <p class="ask-lead">静一静，把想问的事放在心里。<br>也可以写下来。</p>
+
+          <label class="input-shell" for="question">
+            <span>所问 · 可不写</span>
+            <textarea id="question" class="ask-input" rows="2" maxlength="60"
+              placeholder="例如：该不该接下这个新机会？" autocomplete="off"></textarea>
+          </label>
+
+          <div class="ask-meta">
+            <p class="privacy">问题、时刻及时区（含已授权位置）仅在本机用于措辞，不改变起卦结果</p>
+            <p class="method-note">三枚铜钱 · 自下而上 · 六爻成卦</p>
+          </div>
+
+          <button id="begin" class="btn-primary" type="button" disabled>
+            <span>开始摇卦</span><i aria-hidden="true">→</i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 阶段二：筮 -->
+      <div class="panel panel-cast" data-stage="cast" hidden>
+        <div class="cast-shell">
+          <div class="cast-heading">
+            <p class="stage-number" aria-hidden="true">02</p>
+            <div>
+              <p class="section-kicker">CASTING THE LINES</p>
+              <p id="cast-progress" class="cast-progress">第 1 / 6 爻</p>
+            </div>
+          </div>
+
+          <div class="casting-field">
+            <div class="orbit orbit-one" aria-hidden="true"></div>
+            <div class="orbit orbit-two" aria-hidden="true"></div>
+            <div id="coins" class="coins" aria-hidden="true">
+              <span class="coin"></span><span class="coin"></span><span class="coin"></span>
+            </div>
+            <p id="coin-read" class="coin-read">&nbsp;</p>
+            <div class="cast-hex">
+              <div id="cast-hexagram" class="hexagram building" aria-label="正在生成的卦象"></div>
+            </div>
+          </div>
+
+          <div class="cast-actions">
+            <button id="toss" class="btn-primary" type="button"><span>掷一爻</span><i aria-hidden="true">＋</i></button>
+            <button id="toss-all" class="btn-text" type="button">一次摇完</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阶段三：得 -->
+      <div class="panel panel-reveal" data-stage="reveal" hidden>
+        <div class="reveal-grid">
+          <aside class="reveal-hex">
+            <p class="stage-number" aria-hidden="true">03</p>
+            <p class="section-kicker result-section-title">卦象 <span>THE HEXAGRAM</span></p>
+            <div id="reveal-hexagram" class="hexagram"></div>
+            <div class="hex-ident">
+              <span id="hex-symbol" class="hex-symbol"></span>
+              <span id="hex-name" class="hex-name"></span>
+            </div>
+            <p id="hex-trigrams" class="hex-trigrams"></p>
+            <p id="hex-change" class="hex-change"></p>
+          </aside>
+
+          <div class="reveal-body">
+            <header class="result-head">
+              <p class="section-kicker result-section-title">此次所得 <span>READING</span></p>
+              <p id="question-echo" class="question-echo" hidden></p>
+            </header>
+
+            <div class="oracle">
+              <div class="oracle-head">
+                <span id="oracle-badge" class="oracle-badge"></span>
+              </div>
+              <p id="oracle-text" class="oracle-text"></p>
+              <p class="oracle-kicker">据经文断语、卦变与爻位形成的阅读提示 · 非命运预言</p>
+            </div>
+
+            <div class="evidence">
+              <div class="evidence-head">
+                <p class="evidence-label result-section-title">经文依据 <span>TEXTUAL BASIS</span></p>
+                <p id="reading-rule" class="reading-rule"></p>
+              </div>
+              <p id="reveal-source" class="reveal-source"></p>
+              <p id="reveal-vernacular" class="reveal-vernacular"></p>
+              <div id="reveal-secondary" class="reveal-secondary" hidden></div>
+            </div>
+
+            <div class="masters" id="masters" hidden>
+              <button id="masters-toggle" class="masters-toggle" type="button" aria-expanded="true">
+                <span class="masters-title"><b>历代之眼</b><small>HISTORICAL READINGS</small></span><i class="chev" aria-hidden="true">＋</i>
+              </button>
+              <div id="masters-body" class="masters-body" hidden>
+                <div id="master-tabs" class="master-tabs" role="tablist" aria-label="历代解读"></div>
+                <div id="master-card" class="master-card" role="tabpanel"></div>
+              </div>
+            </div>
+
+            <div class="reveal-actions">
+              <button id="again" class="btn-text" type="button">再问一卦</button>
+              <a id="link-starmap" class="xlink" href="../star-map/">在星图中查看此卦 <span>↗</span></a>
+              <a id="link-history" class="xlink" href="../life-history/">看注家所在的时代 <span>↗</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="statusbar">
+      <span id="status">正在载入卦辞与历代注文…</span>
+      <span class="status-hint">星图 v2 今本文本 · 今译 · 汉魏二十一家易注</span>
+    </footer>
+  </main>
+
+  <script type="module" src="./app.js?v=20260715-stage18"></script>
+</body>
+</html>

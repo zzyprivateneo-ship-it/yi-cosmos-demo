@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "title": "周易释读长河",
+    "subtitle": "经本 · 注疏 · 学人的历时星图",
+    "span": { "start": -700, "end": 1900 },
+    "note": "以时间为横轴、学派为河道的释读谱系。数据可持续扩充，节点年代取其存续或活跃区间的通行说法。"
+  },
+  "eras": [
+    { "name": "先秦", "start": -700, "end": -206 },
+    { "name": "汉", "start": -206, "end": 220 },
+    { "name": "魏晋南北朝", "start": 220, "end": 589 },
+    { "name": "隋唐", "start": 589, "end": 960 },
+    { "name": "宋元", "start": 960, "end": 1368 },
+    { "name": "明", "start": 1368, "end": 1644 },
+    { "name": "清", "start": 1644, "end": 1911 }
+  ],
+  "versions": [
+    { "id": "classic", "name": "今本文本系统", "short": "今本", "start": -700, "end": 1900, "y": 0.09, "importance": 1.3, "description": "以传世经、传为核心的文本系统，是后世一切注释、校勘与义理阐释共同的出发点，如一条贯穿全史的主干星流。" },
+    { "id": "silk", "name": "帛书《周易》", "short": "帛书本", "start": -168, "end": 60, "y": 0.185, "importance": 0.85, "description": "汉初写本所保存的异文与篇章形态，为理解早期文本面貌提供了另一条隐没已久的线索。" },
+    { "id": "hanxiang", "name": "汉代象数易", "short": "汉象数", "start": -90, "end": 260, "y": 0.28, "importance": 1.05, "description": "以卦气、纳甲、爻辰等方法解经的传统，京房、郑玄、荀爽、虞翻各成一家，多赖《集解》得以留存。" },
+    { "id": "wangbi", "name": "王弼本系统", "short": "王弼本", "start": 240, "end": 1080, "y": 0.375, "importance": 1.05, "description": "扫落象数、以玄理释经的文本—注释系统，逐渐成为中古以后影响深远的通行本。" },
+    { "id": "jijie", "name": "《周易集解》系统", "short": "集解本", "start": 735, "end": 1360, "y": 0.47, "importance": 1.0, "description": "以汇集旧注的方式保存汉魏以来数十家易说，自成一片独特的解释星团。" },
+    { "id": "zhengyi", "name": "《周易正义》系统", "short": "正义本", "start": 653, "end": 1500, "y": 0.565, "importance": 1.1, "description": "唐代官方经学整合的重要成果，汇入科举与刊刻体系，长期居于正统地位。" },
+    { "id": "cheng", "name": "程氏易学", "short": "程氏", "start": 1093, "end": 1600, "y": 0.66, "importance": 0.95, "description": "以儒家义理贯通卦爻，推动宋代易学形成新的问题结构与解释范式。" },
+    { "id": "zhu", "name": "朱子《本义》系统", "short": "本义本", "start": 1187, "end": 1905, "y": 0.755, "importance": 1.2, "description": "在象数、义理与卜筮古义之间重建秩序，长期进入官学与刊刻系统，影响元明清三代。" },
+    { "id": "qing", "name": "清代考据易学", "short": "考据", "start": 1740, "end": 1905, "y": 0.85, "importance": 1.05, "description": "以辑佚、训诂、校勘之法重探汉易，虞氏之学在千年之后被重新点亮。" }
+  ],
+  "works": [
+    { "id": "yizhuan", "parent": "classic", "name": "《易传》", "short": "易传", "start": -350, "end": 180, "description": "围绕经文层累形成的解释传统，《彖》《象》《系辞》诸篇持续塑造着《周易》的思想结构。" },
+    { "id": "jingshi", "parent": "hanxiang", "name": "京氏易学", "short": "京氏易", "start": -50, "end": 220, "description": "以卦气、八宫、纳甲推演灾异，开汉代象数易一大流派。" },
+    { "id": "wangbi-work", "parent": "wangbi", "name": "王弼《周易注》", "short": "周易注", "start": 240, "end": 760, "description": "以简约玄理重组卦爻解释，得意忘象，深刻改变了中古易学的面貌。" },
+    { "id": "zhengyi-work", "parent": "zhengyi", "name": "孔颖达《周易正义》", "short": "正义", "start": 653, "end": 1100, "description": "奉敕撰定，疏解王弼注而折衷群言，成为官方经学的定本。" },
+    { "id": "jijie-work", "parent": "jijie", "name": "李鼎祚《周易集解》", "short": "集解", "start": 735, "end": 1100, "description": "汇辑子夏、京房、荀爽、虞翻等三十余家旧注，为汉魏象数易保存了大量原始材料。" },
+    { "id": "cheng-work", "parent": "cheng", "name": "《伊川易传》", "short": "伊川易传", "start": 1093, "end": 1500, "description": "程颐以义理释经，不谈象数、专明人事，成为宋代理学易的奠基之作。" },
+    { "id": "zhu-work", "parent": "zhu", "name": "朱熹《周易本义》", "short": "周易本义", "start": 1187, "end": 1850, "description": "兼顾卜筮古义与义理秩序，附以图说，为元明清科举通行之本。" },
+    { "id": "huidong-work", "parent": "qing", "name": "惠栋《周易述》", "short": "周易述", "start": 1750, "end": 1905, "description": "以汉学方法钩沉旧说、专宗汉易，为乾嘉考据易学树立方向。" },
+    { "id": "zhy-work", "parent": "qing", "name": "张惠言《周易虞氏义》", "short": "虞氏义", "start": 1798, "end": 1905, "description": "专治虞翻之学，条理其纳甲、旁通、之正诸例，使千年前的虞氏易复现于世。" }
+  ],
+  "scholars": [
+    { "id": "jingfang", "parent": "jingshi", "name": "京房", "short": "京房", "start": -77, "end": -37, "description": "西汉易学家，创八宫卦、纳甲、卦气之说，以易占候灾异，开象数易一大宗。" },
+    { "id": "marong", "parent": "hanxiang", "name": "马融", "short": "马融", "start": 79, "end": 166, "description": "东汉经学大师，遍注群经，其《周易》注多为郑玄所本。" },
+    { "id": "zhengxuan", "parent": "hanxiang", "name": "郑玄", "short": "郑玄", "start": 127, "end": 200, "description": "汉末经学集大成者，以爻辰说注易，融通今古文，遗说赖《集解》而存。" },
+    { "id": "xunshuang", "parent": "hanxiang", "name": "荀爽", "short": "荀爽", "start": 128, "end": 190, "description": "东汉易学家，主升降之说，为汉易象数一家，其义多见于《集解》。" },
+    { "id": "yufan", "parent": "hanxiang", "name": "虞翻", "short": "虞翻", "start": 164, "end": 233, "description": "三国吴易学家，集汉易象数之大成，纳甲、旁通、卦变诸例最为繁密，后世汉学奉为圭臬。" },
+    { "id": "wangbi-s", "parent": "wangbi-work", "name": "王弼", "short": "王弼", "start": 226, "end": 249, "description": "魏晋玄学奠基者，年二十四而卒，以《周易注》《周易略例》一扫象数，得意忘象。" },
+    { "id": "kongyingda", "parent": "zhengyi-work", "name": "孔颖达", "short": "孔颖达", "start": 574, "end": 648, "description": "唐初经学家，主持《五经正义》编纂，使《周易正义》成为官学定本。" },
+    { "id": "lidingzuo", "parent": "jijie-work", "name": "李鼎祚", "short": "李鼎祚", "start": 700, "end": 780, "description": "唐代学者，撰《周易集解》，汇辑汉魏群家旧注，为后世保存了汉易的半壁星空。" },
+    { "id": "chengyi", "parent": "cheng-work", "name": "程颐", "short": "程颐", "start": 1033, "end": 1107, "description": "北宋理学家，世称伊川先生，以《易传》专明义理，为理学易之宗。" },
+    { "id": "zhuxi", "parent": "zhu-work", "name": "朱熹", "short": "朱熹", "start": 1130, "end": 1200, "description": "南宋理学集大成者，撰《周易本义》，调和象数义理，其说笼罩后世数百年。" },
+    { "id": "huidong", "parent": "huidong-work", "name": "惠栋", "short": "惠栋", "start": 1697, "end": 1758, "description": "清代吴派汉学领袖，撰《周易述》，专宗汉易，力矫宋人空谈义理之弊。" },
+    { "id": "zhanghuiyan", "parent": "zhy-work", "name": "张惠言", "short": "张惠言", "start": 1761, "end": 1802, "description": "清代常州学者，专治虞翻易学，为汉易象数在清代的复兴立下根基。" },
+    { "id": "jiaoxun", "parent": "qing", "name": "焦循", "short": "焦循", "start": 1763, "end": 1820, "description": "清代扬州学者，作《易学三书》，以旁通、相错、时行诸例自成一家，会通汉易与数理。" }
+  ]
+}

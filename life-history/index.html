@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="易·宇宙：从当下之问进入一卦，从一卦进入历代解释与易学史。">
+  <meta name="zhouyi-life-history-version" content="life-history-galaxy-v6-pivot-20260714">
+  <title>易·宇宙 · 周易生命史</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23000'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='30' fill='%23fff'%3E%E2%98%AF%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="../shared-shell.css?v=1.0.0">
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <script src="../shared-shell.js?v=1.0.0" defer></script>
+</head>
+<body class="yx-page-life">
+  <header class="yx-sitebar">
+    <a class="yx-brand" href="../" aria-label="易·宇宙首页">易·宇宙</a>
+    <nav class="yx-global-nav" id="yx-global-nav" aria-label="易·宇宙主导航">
+      <a href="../">首页</a>
+      <a href="../divination/">问卦</a>
+      <a href="../star-map/">星图</a>
+      <a href="./" aria-current="page">生命史</a>
+    </nav>
+    <p class="yx-site-caption">YI · COSMOS</p>
+    <button class="yx-nav-toggle" type="button" aria-label="展开导航菜单" aria-expanded="false" aria-controls="yx-global-nav" hidden><span aria-hidden="true"></span></button>
+  </header>
+
+  <main id="life-app">
+    <a id="main-content" tabindex="-1" class="skip-target" aria-hidden="true"></a>
+    <canvas id="universe" aria-label="周易学术生命史三维星图"></canvas>
+    <div class="cosmic-haze" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <div class="title-block">
+        <p class="eyebrow">易·宇宙 · 经典为核 · 学派成团 · 关系成线</p>
+        <h1>周易生命史</h1>
+      </div>
+      <div class="header-actions">
+        <span id="data-status">正在载入易学史知识网络（117颗星 · 190条关系）…</span>
+        <button id="reset-view" class="quiet-button yx-tool-button" type="button">归位</button>
+      </div>
+    </header>
+
+    <nav class="relation-controls glass" aria-label="星线关系筛选">
+      <span class="control-title">星线</span>
+      <button class="relation-mode active" type="button" data-relation-mode="all" aria-pressed="true">主要关系</button>
+      <button class="relation-mode" type="button" data-relation-mode="authored" aria-pressed="false">著述</button>
+      <button class="relation-mode" type="button" data-relation-mode="lineage" aria-pressed="false">传承</button>
+      <button class="relation-mode" type="button" data-relation-mode="debate" aria-pressed="false">批评</button>
+      <button class="relation-mode" type="button" data-relation-mode="none" aria-pressed="false">无线</button>
+    </nav>
+
+    <div id="node-labels" aria-hidden="true"></div>
+    <div id="tooltip" class="tooltip" role="status" hidden></div>
+    <ul id="a11y-nodes" class="visually-hidden" aria-label="星辰列表，可用Tab键逐一选择"></ul>
+
+    <aside id="detail-panel" class="detail-panel glass" aria-live="polite">
+      <p id="detail-kind" class="detail-kicker">释读宇宙</p>
+      <h2 id="detail-name">拖动星图，观察易学流变</h2>
+      <p id="detail-years" class="detail-years">公元前700年—1989年</p>
+      <p id="detail-description" class="detail-description">人物、著作、学派与文本系统在三维空间中结成星团。悬停唤醒星云，单击进入后拖动环绕中心，再次单击同一星体进入近景；按Esc返回全景。</p>
+      <div id="detail-tags" class="detail-tags"></div>
+      <div id="detail-actions" class="detail-actions"></div>
+      <div id="detail-relations" class="detail-relations"></div>
+    </aside>
+
+    <section class="legend glass" aria-label="星图视觉编码图例">
+      <span><i class="legend-dot core"></i>经典文本</span>
+      <span><i class="legend-dot cluster"></i>同色为同一学派</span>
+      <span><i class="legend-dot importance"></i>大小与亮度表示重要性</span>
+    </section>
+
+    <footer class="timeline-panel">
+      <div class="timeline-readout">
+        <div class="current-time">
+          <p id="era-label">—</p>
+          <strong id="year-label">—</strong>
+        </div>
+        <p id="event-label" class="event-label">拖动白色刻度，选择历史时刻</p>
+        <p id="active-hint">悬停唤醒 · 单击进入 · 聚焦后拖动环绕 · 再次单击靠近 · Esc返回</p>
+      </div>
+      <div id="timeline-scale" class="timeline-scale" role="slider" tabindex="0" aria-label="历史年份" aria-valuemin="-700" aria-valuemax="1989" aria-valuenow="1200">
+        <div id="time-ticks" class="time-ticks" aria-hidden="true"></div>
+        <div class="timeline-marker" aria-hidden="true">
+          <i></i>
+        </div>
+        <label for="time-range" class="sr-only">历史年份（公元前700年至公元1989年）</label>
+        <input id="time-range" type="range" min="-700" max="1989" step="1" value="1200" aria-label="历史年份" />
+      </div>
+    </footer>
+  </main>
+  <noscript>本页面的三维生命史需要 JavaScript 与 WebGL 支持。请启用 JavaScript 后刷新，或使用<a href="../">首页</a>的文字导航。</noscript>
+  <script type="module" src="./app.js?v=1.0.0"></script>
+</body>
+</html>

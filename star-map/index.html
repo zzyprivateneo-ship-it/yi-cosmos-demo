@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../" />
+  <title>易·宇宙 · 六十四卦多面星图</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64'%3E%3Ctext y='52' x='50' text-anchor='middle' dominant-baseline='middle' font-size='54'%3E%E2%98%AF%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="./styles.css?v=20260715-stage18" />
+  <link rel="stylesheet" href="./shared-shell.css?v=20260715-stage18" />
+  <script src="./shared-shell.js?v=20260715-stage18"></script>
+</head>
+<body class="yx-page-star">
+  <header class="yx-sitebar">
+    <a class="yx-brand" href="./" aria-label="易·宇宙首页">易·宇宙</a>
+    <nav class="yx-global-nav" aria-label="易·宇宙主导航">
+      <a href="./">首页</a>
+      <a href="./divination/">问卦</a>
+      <a href="./star-map/" aria-current="page">星图</a>
+      <a href="./life-history/">生命史</a>
+    </nav>
+    <p class="yx-site-caption">YI · COSMOS</p>
+  </header>
+
+  <main id="app">
+    <canvas id="universe" aria-label="周易今本与汉魏二十一家易注六十四卦三维星图"></canvas>
+    <div class="vignette"></div>
+    <div id="reading-backdrop" class="reading-backdrop" aria-hidden="true"></div>
+
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">易·宇宙 · 今本 · 今译 · 汉魏二十一家易注</p>
+        <h1>六十四卦 · 多面星圖</h1>
+      </div>
+      <div class="header-actions">
+        <button id="toggle-index" class="icon-button yx-tool-button" type="button" title="显示六十四卦索引">索引</button>
+        <button id="reset-view" class="icon-button yx-tool-button" type="button" title="重置视角">归位</button>
+      </div>
+    </header>
+
+    <aside id="index-panel" class="index-panel glass collapsed" aria-label="六十四卦索引">
+      <label class="search-wrap">
+        <span>檢索</span>
+        <input id="search" type="search" placeholder="卦名、卦辭或注家…" autocomplete="off" />
+      </label>
+      <div id="trigram-filters" class="trigram-filters"></div>
+      <div id="hexagram-grid" class="hexagram-grid"></div>
+      <p id="filter-status" class="filter-status"></p>
+    </aside>
+
+    <nav id="line-controls" class="line-controls glass" aria-label="星线连接方式">
+      <span class="line-controls-title">星線</span>
+      <button class="line-mode active" type="button" data-line-mode="sequence">卦序</button>
+      <button class="line-mode" type="button" data-line-mode="scholar">注家</button>
+      <button class="line-mode" type="button" data-line-mode="relations">錯綜</button>
+      <button class="line-mode" type="button" data-line-mode="none">無線</button>
+      <select id="scholar-select" class="scholar-select" aria-label="选择注家" hidden></select>
+    </nav>
+
+    <section class="legend glass" aria-label="图例">
+      <p><span class="legend-star"></span> 頂點：六十四卦</p>
+      <p>文本越多 · 距中心越遠</p>
+      <p><span class="legend-line sequence"></span><span id="line-description">卦序線：第一卦至第六十四卦</span></p>
+    </section>
+
+    <div id="hexagram-labels" aria-hidden="true"></div>
+    <div id="hover-tip" class="hover-tip" hidden></div>
+
+    <section id="focus-stage" class="focus-stage" aria-live="polite" aria-hidden="true">
+      <div class="focus-hexagram-wrap">
+        <p id="focus-kicker" class="focus-kicker"></p>
+        <h2 id="focus-title" class="focus-title"></h2>
+        <div id="focus-hexagram" class="focus-hexagram" role="group" aria-label="点击六爻查看爻辞"></div>
+        <p class="focus-hint">點擊一爻 · 查看爻辭、小象與注文</p>
+      </div>
+      <button id="focus-star" class="focus-star" type="button" aria-label="返回卦辞">
+        <span class="focus-star-orb"></span>
+        <span id="focus-star-label" class="focus-star-label"></span>
+      </button>
+    </section>
+
+    <aside id="detail-panel" class="detail-panel glass" aria-live="polite">
+      <button id="close-detail" class="close-button" type="button" aria-label="关闭详情">×</button>
+      <div id="detail-content" class="detail-content">
+        <div class="empty-state">
+          <span class="taiji">☯</span>
+          <h2>選擇一顆卦星</h2>
+          <p>拖曳旋转星图，滚轮缩放；点击星辰查看今本经传、今译与注文。</p>
+        </div>
+      </div>
+    </aside>
+
+    <footer class="statusbar glass">
+      <span id="data-status">正在载入今本、今译与注文…</span>
+      <span>拖曳旋轉 · 滾輪縮放 · 點擊閱讀</span>
+    </footer>
+  </main>
+  <script type="module" src="./app.js?v=20260715-stage18"></script>
+</body>
+</html>

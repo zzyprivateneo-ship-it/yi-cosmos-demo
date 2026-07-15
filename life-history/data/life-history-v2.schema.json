@@ -1,0 +1,264 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.zhouyi/life-history-v2.schema.json",
+  "title": "周易生命史数据模型 2.0",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "meta",
+    "sources",
+    "periods",
+    "entities",
+    "concepts",
+    "relations",
+    "events",
+    "assertions"
+  ],
+  "properties": {
+    "schemaVersion": { "const": "2.0.0" },
+    "meta": {
+      "type": "object",
+      "required": ["title", "timeSpan", "visualPolicy", "stats"],
+      "additionalProperties": true
+    },
+    "sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/source" }
+    },
+    "periods": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/period" }
+    },
+    "entities": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/entity" }
+    },
+    "concepts": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/concept" }
+    },
+    "relations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/relation" }
+    },
+    "events": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/event" }
+    },
+    "assertions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/assertion" }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9-]*:[a-z0-9][a-z0-9-]*$"
+    },
+    "interval": {
+      "type": "object",
+      "required": ["start", "end", "precision", "certainty"],
+      "properties": {
+        "start": { "type": "number" },
+        "end": { "type": "number" },
+        "precision": {
+          "enum": ["year", "range", "period", "dynasty", "approximate", "unknown"]
+        },
+        "certainty": {
+          "enum": ["accepted", "approximate", "disputed", "unknown"]
+        },
+        "display": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "locator": {
+      "type": "object",
+      "properties": {
+        "section": { "type": "string" },
+        "lineStart": { "type": "integer", "minimum": 1 },
+        "lineEnd": { "type": "integer", "minimum": 1 },
+        "jsonPath": { "type": "string" },
+        "printedPage": { "type": ["integer", "string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["sourceId", "locator", "note", "confidence"],
+      "properties": {
+        "sourceId": { "$ref": "#/$defs/id" },
+        "locator": { "$ref": "#/$defs/locator" },
+        "note": { "type": "string", "minLength": 1 },
+        "sourceTextHash": { "type": "string", "pattern": "^[a-f0-9]{16}$" },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "type", "title", "file"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "type": { "enum": ["book", "article", "dataset", "manuscript", "website"] },
+        "title": { "type": "string" },
+        "file": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "period": {
+      "type": "object",
+      "required": ["id", "name", "start", "end"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "start": { "type": "number" },
+        "end": { "type": "number" }
+      },
+      "additionalProperties": false
+    },
+    "entity": {
+      "type": "object",
+      "required": [
+        "id",
+        "type",
+        "name",
+        "shortName",
+        "aliases",
+        "description",
+        "tags",
+        "chronology",
+        "visual",
+        "provenance"
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "type": { "enum": ["person", "work", "school", "text_system"] },
+        "name": { "type": "string", "minLength": 1 },
+        "shortName": { "type": "string", "minLength": 1 },
+        "aliases": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "description": { "type": "string", "minLength": 1 },
+        "tags": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "chronology": {
+          "type": "object",
+          "required": ["visualInterval"],
+          "properties": {
+            "lifespan": { "$ref": "#/$defs/interval" },
+            "activity": { "$ref": "#/$defs/interval" },
+            "influence": { "$ref": "#/$defs/interval" },
+            "visualInterval": { "$ref": "#/$defs/interval" }
+          },
+          "additionalProperties": false
+        },
+        "visual": {
+          "type": "object",
+          "required": ["role", "importance"],
+          "properties": {
+            "role": { "const": "star" },
+            "importance": { "type": "number", "minimum": 0 },
+            "primaryParent": { "type": ["string", "null"] }
+          },
+          "additionalProperties": false
+        },
+        "legacy": {
+          "type": ["object", "null"],
+          "properties": { "id": { "type": "string" } },
+          "additionalProperties": false
+        },
+        "provenance": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/evidence" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "concept": {
+      "type": "object",
+      "required": ["id", "name", "aliases", "category", "description", "visual", "provenance"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "aliases": { "type": "array", "items": { "type": "string" } },
+        "category": { "type": "string" },
+        "description": { "type": "string" },
+        "visual": {
+          "type": "object",
+          "required": ["role"],
+          "properties": { "role": { "const": "tag" } },
+          "additionalProperties": false
+        },
+        "provenance": { "type": "array", "items": { "$ref": "#/$defs/evidence" } }
+      },
+      "additionalProperties": false
+    },
+    "relation": {
+      "type": "object",
+      "required": ["id", "subject", "predicate", "object", "evidence", "confidence", "reviewStatus"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "subject": { "$ref": "#/$defs/id" },
+        "predicate": {
+          "enum": [
+            "affiliated_with",
+            "authored",
+            "based_on",
+            "criticized",
+            "developed",
+            "influenced_by",
+            "participated_in",
+            "preserved",
+            "revived",
+            "studied_under"
+          ]
+        },
+        "object": { "$ref": "#/$defs/id" },
+        "temporal": { "oneOf": [{ "$ref": "#/$defs/interval" }, { "type": "null" }] },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "reviewStatus": { "enum": ["accepted", "needs_review", "rejected"] }
+      },
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "required": ["id", "name", "temporal", "description", "participants", "concepts", "visual", "provenance"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "name": { "type": "string" },
+        "temporal": { "$ref": "#/$defs/interval" },
+        "description": { "type": "string" },
+        "participants": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "concepts": { "type": "array", "items": { "$ref": "#/$defs/id" } },
+        "visual": {
+          "type": "object",
+          "required": ["role", "importance"],
+          "properties": {
+            "role": { "const": "timeline-marker" },
+            "importance": { "type": "number", "minimum": 0 }
+          },
+          "additionalProperties": false
+        },
+        "provenance": { "type": "array", "items": { "$ref": "#/$defs/evidence" } }
+      },
+      "additionalProperties": false
+    },
+    "assertion": {
+      "type": "object",
+      "required": ["id", "subject", "predicate", "value", "claimType", "confidence", "reviewStatus", "evidence"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "subject": { "$ref": "#/$defs/id" },
+        "predicate": { "type": "string" },
+        "value": {},
+        "claimType": {
+          "enum": ["reported_fact", "reported_tradition", "attributed_view", "author_framework", "disputed", "inference"]
+        },
+        "attributedTo": { "type": ["string", "null"] },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 },
+        "reviewStatus": { "enum": ["accepted", "needs_review", "rejected"] },
+        "evidence": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/evidence" } }
+      },
+      "additionalProperties": false
+    }
+  }
+}
